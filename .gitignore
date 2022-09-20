@@ -1,0 +1,26 @@
+#gitignore file
+node_modules/
+node_modules_old/
+node_modules_old2/
+dist/
+dist/*
+package-lock.json
+*.code-workspace
+vuedocs-1.0.0.tgz
+offline/
+debug.log
+metrics.json
+metrics2.txt
+.temp
+.cache
+.dccache
+vuedocs_v2_node_modules.zip
+.env
+docs/reports
+yarn-error.log
+docs/.vuepress/public/files/.~lock.20220616 DRAFT US GovCloud Security Standard.docx#
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/sfdocs.iml
+/.idea/vcs.xml
+/.npmrc

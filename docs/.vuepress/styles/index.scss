@@ -1,0 +1,416 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "prismjs/themes/prism-funky";
+//@import "~primeicons/primeicons.css";
+//@import "~primevue/resources/primevue.min.css";
+
+:root {
+  scroll-behavior: smooth;
+  // brand colors
+  --navbar-height: 4rem;
+  --content-width: 60%;
+  --c-brand: #006dff;
+  --c-brand-light: #4f98ff;
+  // background colors
+  --c-bg: #ffffff;
+  --c-bg-light: #f3f4f5;
+  --c-bg-lighter: #eeeeee;
+  --c-bg-navbar: var(--c-bg);
+  --c-bg-sidebar: var(--c-bg);
+  --c-bg-arrow: #006dff;
+  // border colors
+  --c-border: #eaecef;
+  --c-border-dark: #dfe2e5;
+  // custom container colors
+  --c-tip: #00bfbd;
+  --c-tip-bg: #d9fffb;
+  --c-tip-title: #007588;
+  --c-tip-text: #007588;
+  --c-tip-text-accent: #e21d60;
+  --c-warning: #c15eff;
+  --c-warning-bg: #f2d9ff;
+  --c-warning-title: #8c2ace;
+  --c-warning-text: #8c2ace;
+  --c-warning-text-accent: #d83f11;
+  --c-danger: #fa4692;
+  --c-danger-bg: #ffe0e0;
+  --c-danger-title: #e21d60;
+  --c-danger-text: #e21d60;
+  --c-danger-text-accent: #006dff;
+  --c-details-bg: #c8c7cc;
+  //font vars
+  --font-family: "RR Pioneer", -apple-system, BlinkMacSystemFont, Arial,
+  "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+  "Helvetica Neue", sans-serif;
+  --font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  .theme-default-content {
+    code {
+      background-color: #f0f6ff;
+      color: #0058cb;
+      font-style: italic;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    }
+  }
+}
+
+html.dark {
+  // brand colors
+  --c-brand: #006dff;
+  --c-brand-light: #4f98ff;
+  // background colors
+  --c-bg: #242424;
+  // custom container colors
+  --c-tip: #007588;
+  --c-tip-bg: #8be8df;
+  --c-tip-title: #004a50;
+  --c-tip-text: #004a50;
+  --c-tip-text-accent: #e21d60;
+  --c-warning: #8c2ace;
+  --c-warning-bg: #e2acff;
+  --c-warning-title: #58009c;
+  --c-warning-text: #58009c;
+  --c-warning-text-accent: #d83f11;
+  --c-danger: #e21d60;
+  --c-danger-bg: #fda7c7;
+  --c-danger-title: #880e4f;
+  --c-danger-text: #880e4f;
+  --c-danger-text-accent: #006dff;
+  --c-details-bg: #c8c7cc;
+
+  .theme-default-content {
+    code {
+      background-color: #424242;
+      color: #b2b2b2;
+    }
+
+    pre > * {
+      color: unset;
+      background-color: unset;
+    }
+  }
+
+  .navbar {
+    .site-name {
+      margin-top: 2px;
+      color: #D2D2D2 !important;
+      font-family: "RR Pioneer";
+    }
+  }
+}
+
+// .navbar-links {
+// 	& a {
+// 		color: #ffffff;
+// 	}
+// }
+// .dropdown-wrapper .dropdown-title, .dropdown-wrapper .mobile-dropdown-title {
+// 	color: #ffffff;
+// }
+// .dropdown-item .dropdown-subtitle {
+// 	color: #efeff4;
+// }
+.description {
+  display: none;
+}
+
+// body {
+// 	font-family: "RR Pioneer", -apple-system, BlinkMacSystemFont, Arial, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+// }
+.widePage > .page > .theme-default-content {
+  --content-width: 80%;
+}
+
+.theme-container {
+  &.homePage {
+    & > header {
+      & > a {
+        & > span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.badge {
+  background-color: #4f98ff;
+}
+
+.custom-block {
+  &.tip {
+    background-color: #efffff;
+    border-color: #00bfbd;
+  }
+
+  &.warning {
+    background-color: #fff1ec;
+    border-color: #ff7140;
+  }
+
+  &.danger {
+    background-color: #ffecf4;
+    border-color: #fa4692;
+  }
+}
+
+.shade {
+  &.tip {
+    background-color: #efffff;
+  }
+
+  &.warning {
+    background-color: #fff1ec;
+  }
+
+  &.danger {
+    background-color: #ffecf4;
+  }
+}
+
+.timeline-item {
+  .item {
+    border-left: 5px solid #c8c7cc;
+    padding: 20px 0 20px 15px;
+    position: relative;
+  }
+
+  .month-item {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #c8c7cc;
+  }
+
+  .title-item {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff7140;
+  }
+
+  .description-item {
+    font-weight: 100;
+    margin: 0;
+  }
+
+  .dot {
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: -10px;
+    top: 26px;
+  }
+}
+
+.timeline {
+  text-align: left;
+  width: 100%;
+
+  .wrapper-timeline {
+    position: relative;
+  }
+
+  .wrapper-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 20px;
+
+    .section-year {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 18px;
+
+      .year {
+        margin: 0;
+      }
+    }
+
+    &.unique-timeline {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.noback {
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  padding: 0 !important;
+}
+
+img {
+  &:not(.logo) {
+    padding: 15px 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(34, 25, 25, 0.4);
+    -moz-box-shadow: 0 7px 15px rgba(34, 25, 25, 0.4);
+    -webkit-box-shadow: 0 5px 15px rgba(34, 25, 25, 0.4);
+  }
+}
+
+.hero {
+  img {
+    padding: 0;
+    max-width: 1000px;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+
+.tableParent {
+  overflow: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+table {
+  overflow-x: initial;
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dashed #000;
+
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 75%;
+    transform: translateY(-100%);
+    left: 5%;
+    margin-right: 5px;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    background: #007588;
+    color: #fff;
+    text-align: center;
+    border: #004a50 solid 1px;
+    -webkit-box-shadow: 1px 2px 5px 3px #8a8a8f;
+    -moz-box-shadow: 1px 2px 5px 3px #8a8a8f;
+    box-shadow: 1px 2px 5px 3px #8a8a8f;
+    display: none;
+  }
+
+  &:hover {
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.convo-left {
+  text-align: left;
+  color: #fa4692;
+}
+
+.convo-right {
+  text-align: left;
+  color: #00bfbd;
+}
+
+.convo-bg {
+  background-color: #efeff4;
+  padding: 15px;
+  border-radius: 10px;
+
+  blockquote {
+    color: #8a8a8f;
+  }
+}
+
+#main-title {
+  display: none;
+}
+
+.navbar {
+  .site-name {
+    color: #10069F !important;
+    //text-shadow: 1px 2px 1.5px rgba(0, 0, 0, 0.1) !important;
+    font-family: "RR Pioneer";
+  }
+}
+
+.title {
+  &:focus {
+    outline: none;
+  }
+}
+
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus {
+  outline: none;
+}
+
+.contains-task-list > li {
+  list-style: none;
+}
+
+.custom-container.details > summary {
+  color: #333333;
+}
+
+.radarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 30px;
+  // align-items: stretch;
+  gap: 20px;
+}
+
+.radarItem {
+  padding: 10px;
+  border: solid 1px #e1e1e6;
+  box-shadow: 0 5px 15px #c8c7cc;
+  flex-grow: 1;
+  max-height: 500px;
+  width: 100%;
+}
+
+.custom-container.tip > p > code {
+  // background-color: #e21d60;
+}
+
+.custom-container.warning > p > code {
+  // background-color: #d83f11;
+}
+
+.custom-container.danger > p > code {
+  // background-color: #006dff;
+}
+
+.custom-container.details > p,
+details {
+  color: #666666;
+}
+
+.features {
+  justify-content: space-around !important;
+}
+
+//Mermaid
+
+.node > rect {
+  fill: #0068F0 !important;
+  stroke: #0068F0 !important;
+}
+
+.node > g > g > foreignObject > div {
+  color: #F7F7F7;
+}
