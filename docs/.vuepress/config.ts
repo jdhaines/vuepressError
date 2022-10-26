@@ -18,9 +18,9 @@ import { sidebar } from './sidebar'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
-import { path, getDirname } from '@vuepress/utils'
+import { path } from '@vuepress/utils'
 
-const __dirname = getDirname(import.meta.url)
+// const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
   lang: 'en-US',
